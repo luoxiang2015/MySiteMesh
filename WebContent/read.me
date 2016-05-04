@@ -1,0 +1,16 @@
+简单说明：
+引入了SiteMesh标签。
+<sitemesh:title/> 会自动替换为被过滤页面的title。
+<sitemesh:head/> 会把被过滤页面head里面的东西（除了title）放在这个地方。
+<sitemesh:body/> 被过滤的页面body里面的内容放在这里。
+头部引入js和css，都可以在其他重用。
+
+
+通过decorators.xml  定义装饰器  配置需要过滤的页面
+
+从被过滤的页面中提取title head body 放进装饰器中   
+
+装饰器此配置文件只有一个 为/layouts/default.jsp
+别过滤的页面为 除了  <pattern>/static/*</pattern>
+  <pattern>/remote/*</pattern> 这些要进入default模板中
+  
